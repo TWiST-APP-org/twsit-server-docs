@@ -1,9 +1,198 @@
 {
     "_type": "export",
     "__export_format": 4,
-    "__export_date": "2024-04-14T22:12:23.882Z",
+    "__export_date": "2024-04-24T14:21:15.284Z",
     "__export_source": "insomnia.desktop.app:v8.6.1",
     "resources": [
+        {
+            "_id": "req_4d2aa3ffb55447389ad6d45667d1ba1a",
+            "parentId": "fld_bfc00118f2254057802a9e49c3faa066",
+            "modified": 1713968425435,
+            "created": 1713123228550,
+            "url": "{{ _.base_url }}/account/onboard",
+            "name": "Onboard user",
+            "description": "```response:200\n{\n\t\"success\": true,\n\t\"message\": \"User has successfully been onboarded\"\n}\n```\n\n```response:401\n{\n\t\"success\": false,\n\t\"message\": \"Access Denied\"\n}\n```",
+            "method": "POST",
+            "body": {
+                "mimeType": "multipart/form-data",
+                "params": [
+                    {
+                        "name": "firstName",
+                        "value": "Samuel",
+                        "id": "pair_d60b15fe5c874c888f0902c7749e4feb",
+                        "disabled": false
+                    },
+                    {
+                        "id": "pair_184ec782e2074947b7c7158dac969273",
+                        "name": "lastName",
+                        "value": "Twumasi",
+                        "description": ""
+                    },
+                    {
+                        "id": "pair_085bad1905d9412c9b499e8d7cf7ef0a",
+                        "name": "gender",
+                        "value": "male",
+                        "description": ""
+                    },
+                    {
+                        "id": "pair_a814ed419e974ed7ade29122e05f5f95",
+                        "name": "country",
+                        "value": "Ghana",
+                        "description": ""
+                    },
+                    {
+                        "id": "pair_b2a303b89758446487740a945652c914",
+                        "name": "image",
+                        "value": "",
+                        "description": "",
+                        "type": "file",
+                        "fileName": "/Users/admin/Desktop/demo.jpg"
+                    },
+                    {
+                        "id": "pair_9a19d193291b42d0af1079474a462dff",
+                        "name": "interests[0]",
+                        "value": "41",
+                        "description": "",
+                        "type": "text",
+                        "multiline": false
+                    },
+                    {
+                        "id": "pair_3ab5c65477f34a9f88c41d22895f253e",
+                        "name": "interests[1]",
+                        "value": "42",
+                        "description": "",
+                        "disabled": false
+                    }
+                ]
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "multipart/form-data"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwibG9naW5UeXBlIjoiZ29vZ2xlIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3MTM5NjY5OTF9.KwVqzkM8CfzyMBzBoc6V1yE3SFC3sUiQ8gH6VY9aIL8"
+            },
+            "metaSortKey": -1713123228550,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_bfc00118f2254057802a9e49c3faa066",
+            "parentId": "wrk_e8c54441105040aa80294fa841e05c79",
+            "modified": 1713122346807,
+            "created": 1713122346807,
+            "name": "Account",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1713122346807,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_e8c54441105040aa80294fa841e05c79",
+            "parentId": null,
+            "modified": 1713122129379,
+            "created": 1713122070358,
+            "name": "TWiST-API",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_e10fc82d115b4d319fed4cbf17365a24",
+            "parentId": "fld_bfc00118f2254057802a9e49c3faa066",
+            "modified": 1713968242178,
+            "created": 1713123639799,
+            "url": "{{ _.base_url }}/account/",
+            "name": "Get account data",
+            "description": "```response:200\n{\n  \"success\": true,\n  \"data\": {\n    \"id\": 1,\n    \"firstName\": \"Lorem\",\n    \"lastName\": \"Ipsum\",\n    \"email\": \"lorem0@gmail.com\",\n    \"gender\": \"male\",\n    \"country\": \"Ghana\",\n    \"image\": null,\n    \"isVerified\": true,\n    \"createdAt\": \"2024-04-14T18:07:18.477Z\",\n    \"updatedAt\": \"2024-04-14T18:17:33.514Z\",\n    \"interests\": [\n      {\n        \"id\": 1,\n        \"title\": \"trucido\",\n        \"image\": \"https://picsum.photos/seed/BPyMQHbDvX/640/480\"\n      },\n      {\n        \"id\": 2,\n        \"title\": \"molestias\",\n        \"image\": \"https://picsum.photos/seed/qlq7C3bQ9/640/480\"\n      },\n      {\n        \"id\": 3,\n        \"title\": \"tui\",\n        \"image\": \"https://loremflickr.com/640/480?lock=1687981242974208\"\n      },\n      {\n        \"id\": 4,\n        \"title\": \"aer\",\n        \"image\": \"https://picsum.photos/seed/kHfqrB/640/480\"\n      },\n      {\n        \"id\": 5,\n        \"title\": \"aut\",\n        \"image\": \"https://picsum.photos/seed/yHgrnisQT/640/480\"\n      }\n    ]\n  }\n}\n```\n\n```response:401\n{\n\t\"success\": false,\n\t\"message\": \"Access Denied\"\n}\n```",
+            "method": "GET",
+            "body": {},
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {
+                "type": "bearer",
+                "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiIxIiwibG9naW5UeXBlIjoiZ29vZ2xlIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3MTM5NjY5OTF9.KwVqzkM8CfzyMBzBoc6V1yE3SFC3sUiQ8gH6VY9aIL8"
+            },
+            "metaSortKey": -1713123639799,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_9af1aadd0f934c3fb8aa0eb1cc111503",
+            "parentId": "fld_16d5020cfb4045e7ad855f6dc1d5123f",
+            "modified": 1713966972514,
+            "created": 1713122393019,
+            "url": "{{ _.base_url }}/auth/social",
+            "name": "Social sign in",
+            "description": "```response:200\n{\n\t\"success\": true,\n\t\"data\": {\n\t\t\"user\": {\n\t\t\t\"id\": 3,\n\t\t\t\"firstName\": \"Lorem\",\n\t\t\t\"lastName\": \"Ipsum\",\n\t\t\t\"email\": \"lorem@gmail.com\",\n\t\t\t\"gender\": null,\n\t\t\t\"country\": null,\n\t\t\t\"image\": null,\n\t\t\t\"isVerified\": true,\n\t\t\t\"createdAt\": \"2024-04-14T19:32:05.977Z\",\n\t\t\t\"updatedAt\": \"2024-04-14T19:32:05.977Z\",\n\t\t\t\"interests\": []\n\t\t},\n\t\t\"token\": \"loremcsdvdvsaipsumtoken\"\n\t}\n}\n```",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n\t\"provider\": \"google\",\n\t\"accessToken\": \"ya29.a0Ad52N3-5wsOd8R0q5Kx-rxrpQd_exAzvv-Eyb90RhHYIZKbO7yL9JD7p-0Bi3iWdXcEqWkDduYZbus6Xg8tWF1UWcwjA5yATI8bNQYIQoel9R0JxJRjnn07YuCMpmciob-TxdesHzB3TYoQSKUMMIyUUgnD_mCZNnMScaCgYKAfMSARISFQHGX2MiczKuXhrVcolCMLEiIVDNpw0171\"\n}"
+            },
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/8.6.1"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1713122393019,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_16d5020cfb4045e7ad855f6dc1d5123f",
+            "parentId": "wrk_e8c54441105040aa80294fa841e05c79",
+            "modified": 1713122364088,
+            "created": 1713122364088,
+            "name": "Authentication",
+            "description": "",
+            "environment": {},
+            "environmentPropertyOrder": null,
+            "metaSortKey": -1713122364088,
+            "_type": "request_group"
+        },
         {
             "_id": "req_f87a0b460d4f4f4cbc5129f3a841dfa6",
             "parentId": "fld_ab5ab363a9a04e19946fa8e48d047a14",
@@ -59,147 +248,6 @@
             "_type": "request_group"
         },
         {
-            "_id": "wrk_e8c54441105040aa80294fa841e05c79",
-            "parentId": null,
-            "modified": 1713122129379,
-            "created": 1713122070358,
-            "name": "TWiST-API",
-            "description": "",
-            "scope": "collection",
-            "_type": "workspace"
-        },
-        {
-            "_id": "req_9af1aadd0f934c3fb8aa0eb1cc111503",
-            "parentId": "fld_16d5020cfb4045e7ad855f6dc1d5123f",
-            "modified": 1713132356699,
-            "created": 1713122393019,
-            "url": "{{ _.base_url }}/auth/social",
-            "name": "Social sign in",
-            "description": "```response:200\n{\n\t\"success\": true,\n\t\"data\": {\n\t\t\"user\": {\n\t\t\t\"id\": 3,\n\t\t\t\"firstName\": \"Lorem\",\n\t\t\t\"lastName\": \"Ipsum\",\n\t\t\t\"email\": \"lorem@gmail.com\",\n\t\t\t\"gender\": null,\n\t\t\t\"country\": null,\n\t\t\t\"image\": null,\n\t\t\t\"isVerified\": true,\n\t\t\t\"createdAt\": \"2024-04-14T19:32:05.977Z\",\n\t\t\t\"updatedAt\": \"2024-04-14T19:32:05.977Z\",\n\t\t\t\"interests\": []\n\t\t},\n\t\t\"token\": \"loremcsdvdvsaipsumtoken\"\n\t}\n}\n```",
-            "method": "POST",
-            "body": {
-                "mimeType": "application/json",
-                "text": "{\n\t\"provider\": \"google\",\n\t\"accessToken\": \"lorem ipsum...\"\n}"
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "name": "Content-Type",
-                    "value": "application/json"
-                },
-                {
-                    "name": "User-Agent",
-                    "value": "insomnia/8.6.1"
-                }
-            ],
-            "authentication": {},
-            "metaSortKey": -1713122393019,
-            "isPrivate": false,
-            "pathParameters": [],
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "fld_16d5020cfb4045e7ad855f6dc1d5123f",
-            "parentId": "wrk_e8c54441105040aa80294fa841e05c79",
-            "modified": 1713122364088,
-            "created": 1713122364088,
-            "name": "Authentication",
-            "description": "",
-            "environment": {},
-            "environmentPropertyOrder": null,
-            "metaSortKey": -1713122364088,
-            "_type": "request_group"
-        },
-        {
-            "_id": "req_e10fc82d115b4d319fed4cbf17365a24",
-            "parentId": "fld_bfc00118f2254057802a9e49c3faa066",
-            "modified": 1713132520811,
-            "created": 1713123639799,
-            "url": "{{ _.base_url }}/account/",
-            "name": "Get account data",
-            "description": "```response:200\n{\n  \"success\": true,\n  \"data\": {\n    \"id\": 1,\n    \"firstName\": \"Lorem\",\n    \"lastName\": \"Ipsum\",\n    \"email\": \"lorem0@gmail.com\",\n    \"gender\": \"male\",\n    \"country\": \"Ghana\",\n    \"image\": null,\n    \"isVerified\": true,\n    \"createdAt\": \"2024-04-14T18:07:18.477Z\",\n    \"updatedAt\": \"2024-04-14T18:17:33.514Z\",\n    \"interests\": [\n      {\n        \"id\": 1,\n        \"title\": \"trucido\",\n        \"image\": \"https://picsum.photos/seed/BPyMQHbDvX/640/480\"\n      },\n      {\n        \"id\": 2,\n        \"title\": \"molestias\",\n        \"image\": \"https://picsum.photos/seed/qlq7C3bQ9/640/480\"\n      },\n      {\n        \"id\": 3,\n        \"title\": \"tui\",\n        \"image\": \"https://loremflickr.com/640/480?lock=1687981242974208\"\n      },\n      {\n        \"id\": 4,\n        \"title\": \"aer\",\n        \"image\": \"https://picsum.photos/seed/kHfqrB/640/480\"\n      },\n      {\n        \"id\": 5,\n        \"title\": \"aut\",\n        \"image\": \"https://picsum.photos/seed/yHgrnisQT/640/480\"\n      }\n    ]\n  }\n}\n```\n\n```response:401\n{\n\t\"success\": false,\n\t\"message\": \"Access Denied\"\n}\n```",
-            "method": "GET",
-            "body": {},
-            "parameters": [],
-            "headers": [
-                {
-                    "name": "User-Agent",
-                    "value": "insomnia/8.6.1"
-                }
-            ],
-            "authentication": {
-                "type": "bearer",
-                "token": "jndsaibviusdbcvibsdhbchsdbchbsdhcbhjasd"
-            },
-            "metaSortKey": -1713123639799,
-            "isPrivate": false,
-            "pathParameters": [],
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
-            "_id": "fld_bfc00118f2254057802a9e49c3faa066",
-            "parentId": "wrk_e8c54441105040aa80294fa841e05c79",
-            "modified": 1713122346807,
-            "created": 1713122346807,
-            "name": "Account",
-            "description": "",
-            "environment": {},
-            "environmentPropertyOrder": null,
-            "metaSortKey": -1713122346807,
-            "_type": "request_group"
-        },
-        {
-            "_id": "req_4d2aa3ffb55447389ad6d45667d1ba1a",
-            "parentId": "fld_bfc00118f2254057802a9e49c3faa066",
-            "modified": 1713132533724,
-            "created": 1713123228550,
-            "url": "{{ _.base_url }}/account/onboard",
-            "name": "Onboard user",
-            "description": "```response:200\n{\n  \"success\": true,\n  \"data\": {\n    \"id\": 1,\n    \"firstName\": \"Lorem\",\n    \"lastName\": \"Ipsum\",\n    \"email\": \"lorem@gmail.com\",\n    \"gender\": \"male\",\n    \"country\": \"Ghana\",\n    \"image\": null,\n    \"isVerified\": true,\n    \"createdAt\": \"2024-04-14T18:07:18.477Z\",\n    \"updatedAt\": \"2024-04-14T18:17:33.514Z\",\n    \"interests\": [\n      {\n        \"id\": 1,\n        \"title\": \"trucido\",\n        \"image\": \"https://picsum.photos/seed/BPyMQHbDvX/640/480\"\n      },\n      {\n        \"id\": 2,\n        \"title\": \"molestias\",\n        \"image\": \"https://picsum.photos/seed/qlq7C3bQ9/640/480\"\n      },\n      {\n        \"id\": 3,\n        \"title\": \"tui\",\n        \"image\": \"https://loremflickr.com/640/480?lock=1687981242974208\"\n      },\n      {\n        \"id\": 4,\n        \"title\": \"aer\",\n        \"image\": \"https://picsum.photos/seed/kHfqrB/640/480\"\n      },\n      {\n        \"id\": 5,\n        \"title\": \"aut\",\n        \"image\": \"https://picsum.photos/seed/yHgrnisQT/640/480\"\n      }\n    ]\n  }\n}\n```\n\n```response:401\n{\n\t\"success\": false,\n\t\"message\": \"Access Denied\"\n}\n```",
-            "method": "POST",
-            "body": {
-                "mimeType": "application/json",
-                "text": "{\n\t\"firstName\": \"Lorem\",\n\t\"lastName\": \"Ipsum\",\n\t\"gender\": \"male.female\",\n\t\"country\": \"Ghana\",\n\t\"interests\": [1,2,3,4]\n}"
-            },
-            "parameters": [],
-            "headers": [
-                {
-                    "name": "Content-Type",
-                    "value": "application/json"
-                },
-                {
-                    "name": "User-Agent",
-                    "value": "insomnia/8.6.1"
-                }
-            ],
-            "authentication": {
-                "type": "bearer",
-                "token": "vsavsdvdsvsdvdfdskmvsdnvjnsdjnv"
-            },
-            "metaSortKey": -1713123228550,
-            "isPrivate": false,
-            "pathParameters": [],
-            "settingStoreCookies": true,
-            "settingSendCookies": true,
-            "settingDisableRenderRequestBody": false,
-            "settingEncodeUrl": true,
-            "settingRebuildPath": true,
-            "settingFollowRedirects": "global",
-            "_type": "request"
-        },
-        {
             "_id": "env_fada98cbb980edf30d534fb5d84e1efc62c61189",
             "parentId": "wrk_e8c54441105040aa80294fa841e05c79",
             "modified": 1713127684330,
@@ -230,11 +278,11 @@
         {
             "_id": "env_b32740188b1a4ebe8c74b8d34b93f697",
             "parentId": "env_fada98cbb980edf30d534fb5d84e1efc62c61189",
-            "modified": 1713127766713,
+            "modified": 1713966984890,
             "created": 1713127693772,
             "name": "Production",
             "data": {
-                "base_url": "http://localhost:3000/api/v1"
+                "base_url": "https://twist-server.onrender.com/api/v1"
             },
             "dataPropertyOrder": {
                 "&": [
